@@ -21,16 +21,26 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 val navcontroller = findNavController();
 
         button.setOnClickListener(){
-            findNavController().navigate(R.id.action_homeFragment_to_chooseReciverFragment)
+     val  action =      HomeFragmentDirections.actionHomeFragmentToChooseReciverFragment();
+
+
+            navcontroller.navigate(action)
+            //findNavController().navigate(R.id.action_homeFragment_to_chooseReciverFragment)
         }
 
 
         viewBalance.setOnClickListener(){
-            navcontroller.navigate(R.id.viewBalanceFragment)
+            val  action =      HomeFragmentDirections.actionHomeFragmentToViewBalanceFragment2();
+
+
+            navcontroller.navigate(action)
         }
 
         viewTransction.setOnClickListener(){
-            navcontroller.navigate(R.id.viewTransectionFragment)
+            val  action =      HomeFragmentDirections.actionHomeFragmentToViewTransectionFragment();
+
+
+            navcontroller.navigate(action)
         }
     }
 

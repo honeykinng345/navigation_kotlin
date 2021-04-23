@@ -13,12 +13,24 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_viewBalanceFragment2"
-            app:destination="@id/viewBalanceFragment" />
+            app:destination="@id/viewBalanceFragment"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_up"
+            app:popEnterAnim="@anim/slide_down"
+            app:popExitAnim="@anim/slide_up"/>
         <action
             android:id="@+id/action_homeFragment_to_viewTransectionFragment"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_up"
+            app:popEnterAnim="@anim/slide_down"
+            app:popExitAnim="@anim/slide_up"
             app:destination="@id/viewTransectionFragment" />
         <action
             android:id="@+id/action_homeFragment_to_chooseReciverFragment"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_up"
+            app:popEnterAnim="@anim/slide_down"
+            app:popExitAnim="@anim/slide_up"
             app:destination="@id/chooseReciverFragment" />
     </fragment>
     <fragment
@@ -35,5 +47,22 @@
         android:id="@+id/chooseReciverFragment"
         android:name="j.e.c.navigationjetpack.ChooseReciverFragment"
         android:label="fragment_choose_reciver"
-        tools:layout="@layout/fragment_choose_reciver" />
+        tools:layout="@layout/fragment_choose_reciver" >
+        <action
+            android:id="@+id/action_chooseReciverFragment_to_sendreciverFragment"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_up"
+            app:popEnterAnim="@anim/slide_down"
+            app:popExitAnim="@anim/slide_up"
+            app:destination="@id/sendreciverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendreciverFragment"
+        android:name="j.e.c.navigationjetpack.sendreciverFragment"
+        android:label="fragment_send_reciver"
+        tools:layout="@layout/fragment_send_reciver" >
+        <argument
+            android:name="receivername"
+            app:argType="string" />
+    </fragment>
 </navigation>
