@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 <androidx.appcompat.widget.Toolbar
     android:layout_width="match_parent"
-    app:layout_constraintBottom_toTopOf="parent"
+
 app:layout_constraintEnd_toEndOf="parent"
     android:background="@color/colorPrimary"
     app:popupTheme="@style/Theme.AppCompat.Light"
@@ -15,7 +15,8 @@ app:layout_constraintEnd_toEndOf="parent"
     android:elevation="4dp"
     android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
 app:layout_constraintEnd_toStartOf="parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
 
 </androidx.appcompat.widget.Toolbar>
 
