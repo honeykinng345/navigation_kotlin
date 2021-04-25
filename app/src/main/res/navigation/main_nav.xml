@@ -9,60 +9,79 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="j.e.c.navigationjetpack.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_viewBalanceFragment2"
             app:destination="@id/viewBalanceFragment"
             app:enterAnim="@anim/slide_down"
             app:exitAnim="@anim/slide_up"
             app:popEnterAnim="@anim/slide_down"
-            app:popExitAnim="@anim/slide_up"/>
+            app:popExitAnim="@anim/slide_up" />
         <action
             android:id="@+id/action_homeFragment_to_viewTransectionFragment"
+            app:destination="@id/viewTransectionFragment"
             app:enterAnim="@anim/slide_down"
             app:exitAnim="@anim/slide_up"
             app:popEnterAnim="@anim/slide_down"
-            app:popExitAnim="@anim/slide_up"
-            app:destination="@id/viewTransectionFragment" />
+            app:popExitAnim="@anim/slide_up" />
         <action
             android:id="@+id/action_homeFragment_to_chooseReciverFragment"
+            app:destination="@id/chooseReciverFragment"
             app:enterAnim="@anim/slide_down"
             app:exitAnim="@anim/slide_up"
             app:popEnterAnim="@anim/slide_down"
-            app:popExitAnim="@anim/slide_up"
-            app:destination="@id/chooseReciverFragment" />
+            app:popExitAnim="@anim/slide_up" />
     </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
         android:name="j.e.c.navigationjetpack.ViewBalanceFragment"
-        android:label="view_balance_fragment"
+        android:label="View Balance"
         tools:layout="@layout/view_balance_fragment" />
     <fragment
         android:id="@+id/viewTransectionFragment"
         android:name="j.e.c.navigationjetpack.ViewTransectionFragment"
-        android:label="fragment_view_transections"
+        android:label="View Transections"
         tools:layout="@layout/fragment_view_transections" />
     <fragment
         android:id="@+id/chooseReciverFragment"
         android:name="j.e.c.navigationjetpack.ChooseReciverFragment"
-        android:label="fragment_choose_reciver"
-        tools:layout="@layout/fragment_choose_reciver" >
+        android:label="Send- Cash"
+        tools:layout="@layout/fragment_choose_reciver">
         <action
             android:id="@+id/action_chooseReciverFragment_to_sendreciverFragment"
+            app:destination="@id/sendreciverFragment"
             app:enterAnim="@anim/slide_down"
             app:exitAnim="@anim/slide_up"
             app:popEnterAnim="@anim/slide_down"
-            app:popExitAnim="@anim/slide_up"
-            app:destination="@id/sendreciverFragment" />
+            app:popExitAnim="@anim/slide_up" />
     </fragment>
     <fragment
         android:id="@+id/sendreciverFragment"
         android:name="j.e.c.navigationjetpack.sendreciverFragment"
-        android:label="fragment_send_reciver"
+        android:label="Send Cash - {receivername}"
         tools:layout="@layout/fragment_send_reciver" >
         <argument
             android:name="receivername"
             app:argType="string" />
+        <action
+            android:id="@+id/action_sendreciverFragment_to_confirmDialougFragment"
+            app:destination="@id/confirmDialougFragment" />
+        <action
+            android:id="@+id/action_sendreciverFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <dialog
+        android:id="@+id/confirmDialougFragment"
+        android:name="j.e.c.navigationjetpack.ConfirmDialougFragment"
+        android:label="frgment_confrim_dialoug"
+        tools:layout="@layout/frgment_confrim_dialoug" >
+        <argument android:name="receivername"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="long" />
+    </dialog>
 </navigation>

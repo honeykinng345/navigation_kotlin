@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ConfirmDialougFragment"
+    android:layout_marginBottom="50dp"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/msg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are u sure you want to send ">
+
+    </TextView>
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/msg_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_csncel_dialoug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Cancel"
+
+            android:textColor="#ffff">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_sent_dialoug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:background="@color/colorPrimary"
+            android:text="Sent"
+
+            android:textColor="#ffff">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
